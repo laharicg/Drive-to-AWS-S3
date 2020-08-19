@@ -92,7 +92,7 @@ SAVE
 
 ---
 
-# region
+## region
 
 find in url / bucket info
-here its - > us-east-2
+here its - > us-east-2 (to be used in .env)
