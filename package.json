@@ -1,5 +1,5 @@
 {
-  "name": "drag-and-drop-image-uploader-with-aws-s3",
+  "name": "drive-to-aws-s3",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
