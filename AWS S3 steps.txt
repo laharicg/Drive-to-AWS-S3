@@ -1,0 +1,62 @@
+AWS console - free trier -12 motnhs
+Create an acccount - asks for credit/ debit card details
+IAM - dashboard - Users- Add user 
+		- Username
+		- access type-> programmatic access
+create group - group name 
+	- filter policies -> s3 
+	-> check Amazon S3  full access
+	-> next -> next 
+	-> create user
+upon success
+	you get Access key ID & Security Access Key
+	copy and store both
+Now back to IAM, -> Access management -> Users 
+	->select username ->security credentials
+	->console password : ENABLED
+	->Create access key 
+	-> copy both `access key` & `secret key` & paste in .env
+----------------------------
+S3
+
+services- S3
+create bucket - bucket name (used in .env)
+click on bucket -> permissions ->bucket policy
+-> policy generator ->type of policy -s3 bucket policy
+->principle *
+->actions : select get object , put object 
+->ARN (find near pbucket policy editor: ARN: arn:aws:s3:::laharic)
+->add statement -> generate policy
+
+copy policy and paste in bucket policy editor
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1597738678230",
+    "Statement": [
+        {
+            "Sid": "Stmt1597738674713",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::laharic/*"
+        }
+    ]
+}
+
+check for /* in this line->  "Resource": "arn:aws:s3:::laharic/*"
+
+SAVE
+
+-------------------
+region 
+find in url / bucket info
+here its - > us-east-2
+
+
+
+
+
+
