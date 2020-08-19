@@ -74,6 +74,9 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    axios.get("http://localhost:5000/get-images").then((data) => {
+      this.setState({ images: data });
+    });
     const drop_region_container = document.getElementById(
       "drop-region-container"
     );
@@ -138,7 +141,12 @@ class App extends React.Component {
           <div id="preview" className="mx-auto">
             {this.state.images.map((img, index) => (
               <Fragment key={index}>
-                <img src={img} alt="" />
+                <img
+                  src={
+                    "https://cdn3.iconfinder.com/data/icons/alicons/32/multiple_files-512.png"
+                  }
+                  alt=""
+                />
                 <button
                   className="btn btn-danger btn-block mx-auto"
                   onClick={this.removePreviewImage}
