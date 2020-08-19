@@ -76,17 +76,17 @@ copy this generated policy and paste in bucket policy editor(prev. tab)
 {
 "Sid": "Stmt1597738674713",
 "Effect": "Allow",
-"Principal": "_",
+"Principal": "\_",
 "Action": [
 "s3:GetObject",
 "s3:PutObject"
 ],
-"Resource": "arn:aws:s3:::laharic/_"
+"Resource": "arn:aws:s3:::laharic"
 }
 ]
 }
 
-check for /_ in this line if not add it-> "Resource": "arn:aws:s3:::laharic/_"
+check for `/*` in this line if not add it at end of line (here after laharic)-> "Resource": "arn:aws:s3:::laharic"
 
 SAVE
 
