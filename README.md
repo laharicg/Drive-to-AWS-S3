@@ -68,6 +68,7 @@ click on bucket -> permissions ->bucket policy
 ->add statement -> generate policy
 
 copy this generated policy and paste in bucket policy editor(prev. tab)
+
 {
 "Version": "2012-10-17",
 "Id": "Policy1597738678230",
