@@ -24,3 +24,13 @@ Bucket=
 `region` can be found in S3's bucket list,
 
 in this example, `region` is `us-east-2`, and `Bucket` is `laharic`.
+
+## Run
+
+1. clone the repository: https://github.com/laharicg/Drive-to-AWS-S3.git
+2. one terminal --> cd Drive-to-AWS-S3
+   --> npm install
+   --> npm start
+3. another terminal --> cd client
+   --> npm install
+   --> npm start
